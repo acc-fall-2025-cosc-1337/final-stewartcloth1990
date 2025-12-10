@@ -20,3 +20,10 @@ TEST_CASE("Die rolls are between 1 and 6", "[dice]") {
 		REQUIRE(roll <= 6);
 	}
 }
+TEST_CASE("Two dice sum between 2 and 12", "[dice]") {
+	for (int i = 0; i < 10; ++i) {
+		int roll = rollDie() + rollDie();
+		REQUIRE(roll >= 2);
+		REQUIRE(roll <= 12);
+	}
+}
